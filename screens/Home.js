@@ -2,7 +2,7 @@ import { Ionicons, FontAwesome, AntDesign, Entypo, SimpleLineIcons, MaterialComm
 import React from 'react';
 import { View, TouchableOpacity, Text, Image } from 'react-native';
 
-export default function Home(){
+export default function Home({navigation}){
     const Cards = (props) => {
         return(
             <View style={{
@@ -24,8 +24,8 @@ export default function Home(){
                                 height: 140,
                                 borderRadius: 20,
                                 marginBottom: 10,
-                                marginLeft: 10
-                                
+                                marginLeft: 10,
+                                objectFit: "contain"
                             }
                         }
                     source={ props.url }
@@ -129,12 +129,12 @@ export default function Home(){
         <Cards 
         title={"Pinarello Bike"} amount={"1,700.00"} color={"orange"}
         url={ {
-            uri:  "https://images.unsplash.com/photo-1634163250704-1f7aa020f281?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+            uri:  "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGluYXJlbGxvJTIwYmlrZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
         }}
         />
         <Cards title={"Brompton Bike"} amount={"1,500.00"}
         url={ {
-            uri:  "https://images.unsplash.com/photo-1634163250704-1f7aa020f281?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+            uri:  "https://media.istockphoto.com/photos/black-and-red-folding-bicycle-picture-id690917450?b=1&k=20&m=690917450&s=170667a&w=0&h=sRB_e9XjSBD0qn8l37ApXAFZkfQhZ5Dp2YzoVOEtyF0=",
         }}
         />
         </View>
@@ -147,12 +147,12 @@ export default function Home(){
         <Cards
         title={"Schwinn Bike"} amount={"1,200.00"} 
         url={ {
-            uri:  "https://images.unsplash.com/photo-1634163250704-1f7aa020f281?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+            uri:  "https://media.istockphoto.com/photos/vintage-red-bicycle-picture-id171209836?b=1&k=20&m=171209836&s=170667a&w=0&h=S7RHMl8qOtd8HYnCPTXDKmEWv4iD741qV0MIBlQLFEU=",
         }}
         />
         <Cards title={"Norco Bike"} amount={"9,80.00"}
         url={ {
-            uri:  "https://images.unsplash.com/photo-1634163250704-1f7aa020f281?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+            uri:  "https://images.unsplash.com/photo-1513540870164-07649a1d676f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bm9yY28lMjBiaWtlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
         }}
         />
         </View>
@@ -165,11 +165,29 @@ export default function Home(){
                 marginTop: 15,
 
             }}>
-                <Entypo name="home" size={30} color="orange" />
-                <View style={[styless.icon_container, { transform: [{translateY: -25}] } ]} >
-                <MaterialCommunityIcons name="microphone-outline" size={26} color="white" />
-                </View>
-                <SimpleLineIcons name="handbag" size={30} color="gray" />
+                <TouchableOpacity
+                    onPress={() => {
+                        navigation.navigate('Home')
+                    }}
+                >
+                    <Entypo name="home" size={30} color="orange" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+                        navigation.navigate('Login')
+                    }}
+                >
+                    <View style={[styless.icon_container, { transform: [{translateY: -25}] } ]} >
+                    <MaterialCommunityIcons name="microphone-outline" size={26} color="white" />
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+                        navigation.navigate('Cart')
+                    }}
+                >
+                    <SimpleLineIcons name="handbag" size={30} color="gray" />
+                </TouchableOpacity>
             </View>
         
         </View>
