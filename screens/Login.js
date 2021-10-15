@@ -56,7 +56,8 @@ export default function Login({navigation}){
          }}
          style={{ 
             backgroundColor: "black", 
-            padding: 10, paddingHorizontal: 60,
+            padding: 10, 
+            paddingHorizontal: 60,
             marginTop: 20, 
             borderRadius: 10,
             flexDirection: 'row',
