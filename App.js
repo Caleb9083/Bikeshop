@@ -15,7 +15,7 @@ export default function App() {
     <View style={{flex: 1}}>
       <NavigationContainer>
         <MainNavigator.Navigator 
-      tinitialRouteName="Cart" 
+      initialRouteName="Home" 
         screenOptions={{ headerShown: false }}
         >
           <MainNavigator.Screen name="Home" component={Home} /> 

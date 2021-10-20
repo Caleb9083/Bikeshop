@@ -7,7 +7,7 @@ export default function Home({navigation}){
         return(
             <View style={{
                 borderRadius: 10,
-                backgroundColor: "#e3e3e3",
+                backgroundColor: "#eee",
                 height: 250,
                 width: 150,
                 margin: 10
@@ -161,7 +161,7 @@ export default function Home({navigation}){
                 justifyContent: 'space-around',
                 alignItems: 'center',
                 width: 350,
-                backgroundColor: "#e3e3e3",
+                backgroundColor: "#eee",
                 marginTop: 15,
 
             }}>
@@ -201,7 +201,7 @@ const styless = {
       justifyContent: 'center',
     },
     text_container: {
-        backgroundColor: "#e3e3e3",
+        backgroundColor: "#eee",
         padding: 10, 
         marginTop: 20, 
         borderRadius: 10,
