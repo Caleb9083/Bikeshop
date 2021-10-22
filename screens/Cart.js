@@ -10,16 +10,16 @@ export default function Cart({navigation}){
           name: 'Pinarello Bike',
           category: "Mountain bike",
           amt: "1,700.00",
-          url:  {
-            uri:  "https://images.unsplash.com/photo-1558978806-73073843b15e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHBpbmFyZWxsbyUyMGJpa2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        }
+          url: require('../assets/bike4.png'),
+          
         },
         {
           id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
           name: 'Brompton Bike',
           category: "Road bike",
           amt: "1,500.00",
-          url:  {
+          url: require('../assets/bike2.png'),
+          urk:  {
             uri:  "https://media.istockphoto.com/photos/black-and-red-folding-bicycle-picture-id690917450?b=1&k=20&m=690917450&s=170667a&w=0&h=sRB_e9XjSBD0qn8l37ApXAFZkfQhZ5Dp2YzoVOEtyF0=",
         }
         },
@@ -28,7 +28,8 @@ export default function Cart({navigation}){
           name: 'Pinarello Bike',
           category: "Urban bike",
           amt: "1,200.00",
-          url:  {
+          url: require('../assets/bike3.png'),
+          urk:  {
             uri:  "https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGluYXJlbGxvJTIwYmlrZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60",
         }
         },
@@ -36,8 +37,8 @@ export default function Cart({navigation}){
       
       const Item = ( props ) => (
         <View style={styles.item}>
-            <View  >
-                <Image style={{ height: 80, width: 80, borderRadius: 10}}
+            <View style={{ backgroundColor: "#eee", borderRadius: 10 }} >
+                <Image style={{ height: 80, width: 80 }}
                  source={ props.url } />
             </View>
             <View style={{ justifyContent: "space-between" }}>
@@ -105,13 +106,13 @@ export default function Cart({navigation}){
                     <Text style={{ fontSize: 16, color: "gray" }} >(3 items)</Text>
             </View>
         </View>
-        <View style={{ marginBottom: 20 }} >
+        <View style={{ marginBottom: 10 }} >
           <SafeAreaView style={styles.container}>
             <FlatList data={DATA} renderItem={renderItem} keyExtractor={item => item.id} />
           </SafeAreaView>
         </View>
 
-        <View style={{ backgroundColor: "#eee", borderRadius: 20, width: 340, marginBottom: 20 }} >
+        <View style={{ backgroundColor: "#eee", borderRadius: 20, width: 340, marginBottom: 10 }} >
            <View style={styles.price}>
             <Text style={{ color: "gray" }}>Subtotal</Text><Text style={styles.bold_font}><Text style={styles.money} >$</Text>3,400.00</Text>
            </View>
@@ -127,7 +128,7 @@ export default function Cart({navigation}){
           color: "white", 
           backgroundColor: "orange", 
           padding: 15, 
-          marginBottom: 15, 
+          marginBottom: 20, 
           borderRadius: 10,
           justifyContent: "center",
           alignItems: "center",
@@ -138,9 +139,9 @@ export default function Cart({navigation}){
                 alignItems: 'center',
                 width: 350,
                 backgroundColor: "#eee",
-                marginTop: 15,
+                marginTop: 20,
                 borderRadius: 5,
-                marginBottom: 1
+                marginBottom: 10
             }}>
                 <TouchableOpacity
                     onPress={() => {
@@ -182,7 +183,7 @@ const styles = StyleSheet.create({
     },
     title: {
       fontSize: 18,
-      fontWeight: 450
+      fontWeight: "400"
     },
     price: { 
       flexDirection: 'row', 
@@ -192,11 +193,11 @@ const styles = StyleSheet.create({
     },
     bold_font: { 
       fontSize: 20, 
-      fontWeight: 620 
+      fontWeight: "600" 
     },
     money: {
       color: "orange", 
-      fontWeight: 700, 
+      fontWeight: "700", 
       fontSize: 16, 
       justifyContent: "flex-end",
       paddingRight: 2 

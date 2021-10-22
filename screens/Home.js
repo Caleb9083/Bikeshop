@@ -8,27 +8,23 @@ export default function Home({navigation}){
             <View style={{
                 borderRadius: 10,
                 backgroundColor: "#eee",
-                height: 250,
+                height: 200,
                 width: 150,
                 margin: 10
                 }}>
                 <TouchableOpacity style={{ flexDirection: "column" }}>
-                    <View style={{ justifyContent: "flex-end", flexDirection: "row", marginBottom: 10 }}>
+                    <View style={{ justifyContent: "flex-end", flexDirection: "row", marginBottom: 5 }}>
                         <AntDesign name="hearto" size={24} color={props.color} />
                     </View>
-                    <View >
+                    <View style={{ padding: 5,  }} >
                     <Image
                         style={
                             {
-                                width: 130,
-                                height: 140,
-                                borderRadius: 20,
-                                marginBottom: 10,
-                                marginLeft: 10,
-                                objectFit: "contain"
+                                width: 140,
+                                height: 100,
                             }
                         }
-                    source={ props.url }
+                    source= { props.url }
                         
                     />
                     </View>
@@ -78,7 +74,7 @@ export default function Home({navigation}){
                 marginTop: 10,
                 fontWeight: 700,
                 color: 'gray',
-                marginTop: 10,
+                marginTop: 7,
                 fontSize: 20
 
             }}>The World's 
@@ -94,7 +90,7 @@ export default function Home({navigation}){
                 marginTop: 10,
                 fontWeight: 700,
                 color: 'black',
-                marginTop: 10,
+                marginTop: 7,
                 fontSize: 20,
                 width: 350
             }}>Categories
@@ -105,7 +101,7 @@ export default function Home({navigation}){
             alignItems: 'center',
             width: 350,
             justifyContent: 'space-around',
-            marginBottom: 15,
+            marginBottom: 10, 
             }}>
             <Text style={ 
                 [styless.text_container, {color: "orange"}]           
@@ -128,14 +124,10 @@ export default function Home({navigation}){
          }}>
         <Cards 
         title={"Pinarello Bike"} amount={"1,700.00"} color={"orange"}
-        url={ {
-            uri:  "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGluYXJlbGxvJTIwYmlrZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        }}
+        url={ require('../assets/bike1.png')}
         />
         <Cards title={"Brompton Bike"} amount={"1,500.00"}
-        url={ {
-            uri:  "https://media.istockphoto.com/photos/black-and-red-folding-bicycle-picture-id690917450?b=1&k=20&m=690917450&s=170667a&w=0&h=sRB_e9XjSBD0qn8l37ApXAFZkfQhZ5Dp2YzoVOEtyF0=",
-        }}
+        url={ require('../assets/bike2.png')}
         />
         </View>
         <View style={{ 
@@ -146,14 +138,10 @@ export default function Home({navigation}){
          }}>
         <Cards
         title={"Schwinn Bike"} amount={"1,200.00"} 
-        url={ {
-            uri:  "https://media.istockphoto.com/photos/vintage-red-bicycle-picture-id171209836?b=1&k=20&m=171209836&s=170667a&w=0&h=S7RHMl8qOtd8HYnCPTXDKmEWv4iD741qV0MIBlQLFEU=",
-        }}
+        url={ require('../assets/bike3.png')}
         />
         <Cards title={"Norco Bike"} amount={"9,80.00"}
-        url={ {
-            uri:  "https://images.unsplash.com/photo-1513540870164-07649a1d676f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bm9yY28lMjBiaWtlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        }}
+        url={ require('../assets/bike4.png')}
         />
         </View>
         <View style={{ 
@@ -162,7 +150,8 @@ export default function Home({navigation}){
                 alignItems: 'center',
                 width: 350,
                 backgroundColor: "#eee",
-                marginTop: 15,
+                marginTop: 20,
+                marginBottom: 10
 
             }}>
                 <TouchableOpacity
